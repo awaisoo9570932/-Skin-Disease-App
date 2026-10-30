@@ -35,8 +35,7 @@ app_mode = st.sidebar.selectbox("Navigate System", ["🔍 AI Analysis Dashboard"
 # 3. Model Loading (With Spinners)
 @st.cache_resource
 def load_medical_model():
-    return tf.keras.models.load_model('skin_disease_model.h5')
-
+    return tf.keras.models.load_model('skin_disease_model.keras')
 with st.spinner("Initializing Deep Learning Engine..."):
     try:
         model = load_medical_model()
